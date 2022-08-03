@@ -47,7 +47,7 @@ pipeline {
             steps{
                 //===Docker login para efetuar o push===\\
                 withCredentials([string(credentialsId: 'usr_registry', variable: 'DOCKERPWD')]) {
-                    sh "docker login -u <NOME_DO_USUARIO> -p ${DOCKERPWD}"
+                    echo 'sh "docker login -u <NOME_DO_USUARIO> -p ${DOCKERPWD}"'
                 }
                 //===TESTE PARA VERIFICAÇÃO DE VARIÁVEIS===\\
                 echo "docker push ${env.REGISTRY}/${env.APP}:${params.VERSAO}"
