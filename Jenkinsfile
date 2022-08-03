@@ -1,12 +1,12 @@
 pipeline {
 
     agent any
-
+/*
     parameters {
         gitParameter name: 'VERSAO',
         type: 'PT_BRANCH_TAG',
         defaultValue: 'master'
-    }
+    }*/
     environment {
         APP = "nome_do_app"
         REGISTRY = "registry.url.com"
