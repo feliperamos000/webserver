@@ -79,7 +79,7 @@ pipeline {
         stage('Docker Run'){
             steps{
                 //===Execuçao de conteiner com imagem recém-criada===\\
-                sh "docker --host ssh://jenkins@${env.DOCKER_SERVER} run ${env.REGISTRY}/${env.APP}:${params.VERSAO} -e <VARIAVEL>=<DB_SERVER>"
+                echo 'sh "docker --host ssh://jenkins@${env.DOCKER_SERVER} run ${env.REGISTRY}/${env.APP}:${params.VERSAO} -e <VARIAVEL>=<DB_SERVER>"'
             }
         }
     }
