@@ -1,12 +1,12 @@
 pipeline {
 
     agent any
-
+/*
     parameters {
         gitParameter name: 'VERSAO',
         type: 'PT_BRANCH_TAG',
         defaultValue: 'dev'
-    }
+    }*/
     environment {
         APP = "nome_do_app"
         REGISTRY = "registry.url.com"
@@ -15,7 +15,7 @@ pipeline {
         DB_SERVER = ""
     }
     
-    stages{
+    stages{/*
         stage('SCM'){
             steps{
                 checkout ([
@@ -28,7 +28,7 @@ pipeline {
                     userRemoteConfigs: [[ credentialsId: 'usr_git_jenkins', url: "${env.GIT_URL}" ]]
                     ])
             }
-        }
+        }*/
 
         stage('Docker Build'){
             steps{
